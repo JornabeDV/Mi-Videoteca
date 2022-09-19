@@ -16,6 +16,21 @@ h1 {
 	font-size: 60px;
 	color: rgb(241, 168, 10);
 }
+
+.favorito {
+	text-align: center;
+}
+
+/*Boton DarkMode*/
+
+.dark {
+	background-color: white;
+}
+
+.dark h4 {
+	color: black;
+}
+
 .contenedor {
 	width: 90%;
 	max-width: 1000px;

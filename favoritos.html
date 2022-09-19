@@ -7,40 +7,45 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-	<!-- Cdn SweetAlert -->
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<link rel="stylesheet" href="estilos.css">
-	 <!-- link boton modo dark -->
-	 <script src="https://kit.fontawesome.com/e8d74ed8c2.js" crossorigin="anonymous"></script>
-
-	<title>Mi Videoteca</title>
-
+	<title>Mi Favoritos</title>
 </head>
 
 <body>
 
-	<h1>MI VIDEOTECA</h1>
+	<h1>MIS FAVORITOS</h1>
 
 	<button class="switch" id="switch">
 		<span><i class="fa-solid fa-sun"></i></span>
 		<span><i class="fa-solid fa-moon"></i></span>
 	</button>
 
-	<a class="favorito" href="favoritos.html">Mis Favoritos</a>
+	<a href="index.html">Mi Videoteca</a>
 
-	<div class="contenedor" id="contenedor"></div>
+    <div class "container py-2">
+        <p class="lead">Ingrese Pelicula</p>
+        <form>
+        <input id="id" type="text" placeholder="Ingresa id" class="form-control my-2">
+        <input id="nombre" type="text" placeholder="Pelicula" class="form-control my-2">
+		<button id="capturar" class="btn btn-success" type="reset" >Agregar</button>
+        </form>
+    </div>
+	<div class="container">
+		<table class="table" id="tabla">
+			<thead class="thead-inverse">
+				<tr>
+					<th>id</th>
+					<th>pelicula</th>
+				</tr>
+			</thead>
 
-	<div class="pieDePagina">
-		<button id="btnAnterior">Anterior</button>
-		<button id="btnSiguiente">Siguiente</button>
+		</table>
 	</div>
 
-	<script src="app.js"></script>
 	<script src="favoritos.js"></script>
-	<script src="alert.js"></script>
 	<script src="darkmode.js"></script>
-
+	
 </body>
 </html>

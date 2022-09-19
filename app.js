@@ -1,4 +1,7 @@
 
+
+//Creación de Variables.
+
 let pagina = 1;
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
@@ -21,7 +24,7 @@ btnAnterior.addEventListener('click', () => {
 	}
 });
 
-//Carga de cartelera de películas.
+//Carga de cartelera de películas mediante API externa.
 
 const cargarPeliculas = async() => {
 	try {
@@ -47,7 +50,7 @@ const cargarPeliculas = async() => {
 			document.getElementById('contenedor').innerHTML = peliculas;
 
 		} else if(respuesta.status === 401){
-			console.log('Pusiste la llave mal');
+			console.log('Pusiste mal el código');
 		} else if(respuesta.status === 404){
 			console.log('La pelicula que buscas no existe');
 		} else {
@@ -59,5 +62,6 @@ const cargarPeliculas = async() => {
 	}
 
 }
+//Funcion para cargar las peliculas.
 
 cargarPeliculas();
